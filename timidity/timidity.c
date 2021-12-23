@@ -1607,7 +1607,7 @@ MAIN_INTERFACE int read_config_file(char *name, int self)
 		if (*w[1] == '-') {
 			int optind_save = optind;
 			optind = 0;
-#if defined(__MINGW32__) || defined(__CYGWIN__)
+#if defined(__CYGWIN__)
 			optreset = 1;
 #endif
 			c = getopt_long(words, w, optcommands, longopts, &longind);
@@ -5689,7 +5689,7 @@ int main(int argc, char **argv)
 #endif
 
     optind = longind = 0;
-#if defined(__MINGW32__) || defined(__CYGWIN__)
+#if defined(__CYGWIN__)
 	optreset = 1;
 #endif
     while ((c = getopt_long(argc, argv, optcommands, longopts, &longind)) > 0)

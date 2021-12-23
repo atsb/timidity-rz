@@ -1,0 +1,96 @@
+cd utils
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT bitset.o -MD -MP -MF ".deps/bitset.Tpo" -c -o bitset.o bitset.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT fft4g.o -MD -MP -MF ".deps/fft4g.Tpo" -c -o fft4g.o fft4g.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT mblock.o -MD -MP -MF ".deps/mblock.Tpo" -c -o mblock.o mblock.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT memb.o -MD -MP -MF ".deps/memb.Tpo" -c -o memb.o memb.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT nkflib.o -MD -MP -MF ".deps/nkflib.Tpo" -c -o nkflib.o nkflib.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT strtab.o -MD -MP -MF ".deps/strtab.Tpo" -c -o strtab.o strtab.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT support.o -MD -MP -MF ".deps/support.Tpo" -c -o support.o support.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../timidity  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT timer.o -MD -MP -MF ".deps/timer.Tpo" -c -o timer.o timer.c
+del /f libutils.a
+ar cru libutils.a bitset.o fft4g.o mblock.o memb.o nkflib.o strtab.o support.o timer.o    
+ranlib libutils.a
+cd ../libarc
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT arc.o -MD -MP -MF ".deps/arc.Tpo" -c -o arc.o arc.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT arc_lzh.o -MD -MP -MF ".deps/arc_lzh.Tpo" -c -o arc_lzh.o arc_lzh.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT arc_mime.o -MD -MP -MF ".deps/arc_mime.Tpo" -c -o arc_mime.o arc_mime.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT arc_tar.o -MD -MP -MF ".deps/arc_tar.Tpo" -c -o arc_tar.o arc_tar.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT arc_zip.o -MD -MP -MF ".deps/arc_zip.Tpo" -c -o arc_zip.o arc_zip.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT deflate.o -MD -MP -MF ".deps/deflate.Tpo" -c -o deflate.o deflate.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT explode.o -MD -MP -MF ".deps/explode.Tpo" -c -o explode.o explode.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT inflate.o -MD -MP -MF ".deps/inflate.Tpo" -c -o inflate.o inflate.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT unlzh.o -MD -MP -MF ".deps/unlzh.Tpo" -c -o unlzh.o unlzh.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url.o -MD -MP -MF ".deps/url.Tpo" -c -o url.o url.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_b64decode.o -MD -MP -MF ".deps/url_b64decode.Tpo" -c -o url_b64decode.o url_b64decode.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_buff.o -MD -MP -MF ".deps/url_buff.Tpo" -c -o url_buff.o url_buff.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_cache.o -MD -MP -MF ".deps/url_cache.Tpo" -c -o url_cache.o url_cache.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_dir.o -MD -MP -MF ".deps/url_dir.Tpo" -c -o url_dir.o url_dir.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_file.o -MD -MP -MF ".deps/url_file.Tpo" -c -o url_file.o url_file.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_hqxdecode.o -MD -MP -MF ".deps/url_hqxdecode.Tpo" -c -o url_hqxdecode.o url_hqxdecode.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_inflate.o -MD -MP -MF ".deps/url_inflate.Tpo" -c -o url_inflate.o url_inflate.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_mem.o -MD -MP -MF ".deps/url_mem.Tpo" -c -o url_mem.o url_mem.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_pipe.o -MD -MP -MF ".deps/url_pipe.Tpo" -c -o url_pipe.o url_pipe.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_qsdecode.o -MD -MP -MF ".deps/url_qsdecode.Tpo" -c -o url_qsdecode.o url_qsdecode.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT url_uudecode.o -MD -MP -MF ".deps/url_uudecode.Tpo" -c -o url_uudecode.o url_uudecode.c
+del /f libarc.a
+ar cru libarc.a arc.o arc_lzh.o arc_mime.o arc_tar.o arc_zip.o deflate.o explode.o inflate.o unlzh.o url.o url_b64decode.o url_buff.o url_cache.o url_dir.o url_file.o url_hqxdecode.o url_inflate.o url_mem.o url_pipe.o url_qsdecode.o url_uudecode.o 
+ranlib libarc.a
+cd ../interface
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../libarc -I../utils  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT dumb_c.o -MD -MP -MF ".deps/dumb_c.Tpo" -c -o dumb_c.o dumb_c.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../libarc -I../utils  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT wrdt_dumb.o -MD -MP -MF ".deps/wrdt_dumb.Tpo" -c -o wrdt_dumb.o wrdt_dumb.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../libarc -I../utils  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT wrdt_tty.o -MD -MP -MF ".deps/wrdt_tty.Tpo" -c -o wrdt_tty.o wrdt_tty.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../timidity -I../libarc -I../utils  -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT wrdt_wcon.o -MD -MP -MF ".deps/wrdt_wcon.Tpo" -c -o wrdt_wcon.o wrdt_wcon.c
+del /f libinterface.a
+ar cru libinterface.a dumb_c.o wrdt_dumb.o wrdt_tty.o   wrdt_wcon.o  
+ranlib libinterface.a
+cd ../timidity
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT aiff_a.o -MD -MP -MF ".deps/aiff_a.Tpo" -c -o aiff_a.o aiff_a.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT aq.o -MD -MP -MF ".deps/aq.Tpo" -c -o aq.o aq.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT au_a.o -MD -MP -MF ".deps/au_a.Tpo" -c -o au_a.o au_a.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT audio_cnv.o -MD -MP -MF ".deps/audio_cnv.Tpo" -c -o audio_cnv.o audio_cnv.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT common.o -MD -MP -MF ".deps/common.Tpo" -c -o common.o common.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT controls.o -MD -MP -MF ".deps/controls.Tpo" -c -o controls.o controls.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT effect.o -MD -MP -MF ".deps/effect.Tpo" -c -o effect.o effect.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT filter.o -MD -MP -MF ".deps/filter.Tpo" -c -o filter.o filter.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT freq.o -MD -MP -MF ".deps/freq.Tpo" -c -o freq.o freq.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT instrum.o -MD -MP -MF ".deps/instrum.Tpo" -c -o instrum.o instrum.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT list_a.o -MD -MP -MF ".deps/list_a.Tpo" -c -o list_a.o list_a.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT loadtab.o -MD -MP -MF ".deps/loadtab.Tpo" -c -o loadtab.o loadtab.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT m2m.o -MD -MP -MF ".deps/m2m.Tpo" -c -o m2m.o m2m.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT mfi.o -MD -MP -MF ".deps/mfi.Tpo" -c -o mfi.o mfi.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT miditrace.o -MD -MP -MF ".deps/miditrace.Tpo" -c -o miditrace.o miditrace.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT mix.o -MD -MP -MF ".deps/mix.Tpo" -c -o mix.o mix.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT mod.o -MD -MP -MF ".deps/mod.Tpo" -c -o mod.o mod.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT mod2midi.o -MD -MP -MF ".deps/mod2midi.Tpo" -c -o mod2midi.o mod2midi.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT modmid_a.o -MD -MP -MF ".deps/modmid_a.Tpo" -c -o modmid_a.o modmid_a.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT mt19937ar.o -MD -MP -MF ".deps/mt19937ar.Tpo" -c -o mt19937ar.o mt19937ar.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT optcode.o -MD -MP -MF ".deps/optcode.Tpo" -c -o optcode.o optcode.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT output.o -MD -MP -MF ".deps/output.Tpo" -c -o output.o output.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT playmidi.o -MD -MP -MF ".deps/playmidi.Tpo" -c -o playmidi.o playmidi.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT quantity.o -MD -MP -MF ".deps/quantity.Tpo" -c -o quantity.o quantity.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT raw_a.o -MD -MP -MF ".deps/raw_a.Tpo" -c -o raw_a.o raw_a.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT rcp.o -MD -MP -MF ".deps/rcp.Tpo" -c -o rcp.o rcp.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT readmidi.o -MD -MP -MF ".deps/readmidi.Tpo" -c -o readmidi.o readmidi.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT recache.o -MD -MP -MF ".deps/recache.Tpo" -c -o recache.o recache.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT calcnewt.o -MD -MP -MF ".deps/calcnewt.Tpo" -c -o calcnewt.o calcnewt.c
+gcc  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64   -o calcnewt.exe  calcnewt.o  -lm       -lwinmm
+calcnewt.exe > newton_table.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT resample.o -MD -MP -MF ".deps/resample.Tpo" -c -o resample.o resample.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT reverb.o -MD -MP -MF ".deps/reverb.Tpo" -c -o reverb.o reverb.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT sbkconv.o -MD -MP -MF ".deps/sbkconv.Tpo" -c -o sbkconv.o sbkconv.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT sffile.o -MD -MP -MF ".deps/sffile.Tpo" -c -o sffile.o sffile.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT sfitem.o -MD -MP -MF ".deps/sfitem.Tpo" -c -o sfitem.o sfitem.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT smfconv.o -MD -MP -MF ".deps/smfconv.Tpo" -c -o smfconv.o smfconv.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT smplfile.o -MD -MP -MF ".deps/smplfile.Tpo" -c -o smplfile.o smplfile.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT sndfont.o -MD -MP -MF ".deps/sndfont.Tpo" -c -o sndfont.o sndfont.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT tables.o -MD -MP -MF ".deps/tables.Tpo" -c -o tables.o tables.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT timidity.o -MD -MP -MF ".deps/timidity.Tpo" -c -o timidity.o timidity.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -c ./version.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT wave_a.o -MD -MP -MF ".deps/wave_a.Tpo" -c -o wave_a.o wave_a.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT wrd_read.o -MD -MP -MF ".deps/wrd_read.Tpo" -c -o wrd_read.o wrd_read.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT wrdt.o -MD -MP -MF ".deps/wrdt.Tpo" -c -o wrdt.o wrdt.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.. -I.. -I../libarc -I../interface -I../utils   -DNO_MODULES -D__W32__ -DAU_W32  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64 -MT w32_a.o -MD -MP -MF ".deps/w32_a.Tpo" -c -o w32_a.o w32_a.c
+gcc  -O2 -s -fomit-frame-pointer -mtune=generic -march=x86-64   -o timidity.exe  aiff_a.o aq.o au_a.o audio_cnv.o common.o controls.o effect.o filter.o freq.o instrum.o list_a.o loadtab.o m2m.o mfi.o miditrace.o mix.o mod.o mod2midi.o modmid_a.o mt19937ar.o optcode.o output.o playmidi.o quantity.o raw_a.o rcp.o readmidi.o recache.o resample.o reverb.o sbkconv.o sffile.o sfitem.o smfconv.o smplfile.o sndfont.o tables.o timidity.o version.o wave_a.o wrd_read.o wrdt.o w32_a.o ../libarc/libarc.a ../interface/libinterface.a ../utils/libutils.a  -lm       -lwinmm
+cd ../doc
+del /f timidity.1; ln -s ./C/timidity.1 .
+del /f timidity.cfg.5; ln -s ./C/timidity.cfg.5 .
