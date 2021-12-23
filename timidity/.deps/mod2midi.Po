@@ -1,0 +1,2 @@
+mod2midi.o: mod2midi.c ../config.h
+../config.h:

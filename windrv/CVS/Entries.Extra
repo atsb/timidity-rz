@@ -1,0 +1,10 @@
+/Makefile.am////*///
+/Makefile.in////*///
+/mmddk.h////*///
+/oemsetup.inf////*///
+/timiditydrv.cpp////*///
+/timiditydrv.def////*///
+/timiditydrv.idl////*///
+/timiditydrv.inf////*///
+/timiwp_timidity.c////*///
+/timiwp_timidity.h////*///

@@ -1,0 +1,13 @@
+/Makefile.am////*///
+/Makefile.in////*///
+/back.xbm////*///
+/fwrd.xbm////*///
+/next.xbm////*///
+/pause.xbm////*///
+/play.xbm////*///
+/prev.xbm////*///
+/quit.xbm////*///
+/random.xbm////*///
+/repeat.xbm////*///
+/stop.xbm////*///
+/timidity.xbm////*///

@@ -1,0 +1,2 @@
+smfconv.o: smfconv.c ../config.h
+../config.h:
